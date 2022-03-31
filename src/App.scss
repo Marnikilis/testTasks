@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2ec4b6;
+  font-family: 'Tomorrow', sans-serif;
+  margin: 70px;
+  max-height: 100vh;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  transition-duration: 0.4s;
+  text-decoration: none;
+}
+
+a.active{
+  color: #b5e48c;
+}

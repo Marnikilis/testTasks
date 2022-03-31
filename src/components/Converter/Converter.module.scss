@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  align-items: center;
+}
+
+input{
+  border: none;
+  background-color: #edf2fb;
+  border-radius: 10px;
+  margin: 10px;
+  outline:none;
+  padding: 5px 10px;
+
+  &:hover{
+    border-bottom: 2px solid #1b4332;
+  }
+}
+
+label{
+  font-weight: bolder;
+  margin-right: 10px;
+}
