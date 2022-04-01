@@ -11,15 +11,11 @@ const MainPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      dispatch(getCurUSD())
-      dispatch(getCurEUR())
-      dispatch(getCurPLN())
-      setLoading(false);
-    }, 1000);
-    return () => {
-      clearTimeout(timer);
+    const fetchData = async ()=>{
+      await Promise.all([dispatch(getCurUSD()), dispatch(getCurEUR()),dispatch(getCurPLN())])
+      setLoading(false)
     }
+    fetchData()
   }, []);
 
   return (
